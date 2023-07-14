@@ -1,0 +1,27 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <!-- En este lugar va lo que cambia a la vista -->
+    
+    {% if miFormulario.errors %}
+        <p style="color: red;">Los datos estan mal, revisa y vuelve a intentarlo</p>
+    {% endif %}
+
+    <p>Estamos buscando el :{{categoria}}</p>
+
+    {% if tema %}
+        <ul>
+            {% for tem in tema %}
+
+                <li>{{tema.tema}}</li>
+                <li>{{tema.categoria}}</li>
+
+            {% endfor %}
+
+        </ul>
+    {% endif %}
+
+{% endblock %}

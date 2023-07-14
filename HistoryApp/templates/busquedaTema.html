@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <!-- En este lugar va lo que cambia a la vista -->
+    
+    {% if miFormulario.errors %}
+        <p style="color: red;">Los datos estan mal, revisa y vuelve a intentarlo</p>
+    {% endif %}
+
+    <form action="/HistoryApp/Busqueda" method="GET">
+        <input type="texto" name="categoria" id="categoria">
+        <input type="submit" value="Buscar">
+    </form>
+    
+{% endblock %}

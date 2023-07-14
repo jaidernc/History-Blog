@@ -1,0 +1,29 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+    <!-- En este lugar va li que cambia a la vista -->
+    <!-- <h1>Este es el tituli de inicio que cambio</h1>
+    <p>se ah heredado todo desde la plantilla madre</p>
+
+    <h3>Es el hijo, inicio.html donde casi no hay nada</h3> -->
+    {% if tema %}
+        <p>Estamos buscando el : {{categoria}}</p>
+        <ul>
+            {% for tem in tema %}
+                <li> {{tem.nombre}} </li>
+                <li> {{tem.categoria}} </li>
+            {% endfor %}
+
+        </ul>
+
+    {% else %}
+
+        <p>No se encontraron datos con esa descripcion </p>
+
+    {% endif %}    
+    <p style="color: red;">{{respuesta}}</p>
+{% endblock %}
+
