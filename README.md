@@ -29,5 +29,7 @@ en el formulario debera ingresar sus datos y dar click en el boton enviar para c
 SUPER USUARIO:
 para ingresara la pestaña de django admin, dbera ingresar la siguiente direccion:
 http://127.0.0.1:8000/admin/
+
 USUARIO:JANCNIO
+
 CONTRASEÑA: c24k521qc4kltl
